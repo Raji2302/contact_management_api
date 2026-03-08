@@ -1,22 +1,370 @@
-# Contact Manager Project
+CONTACT MANAGEMENT SYSTEM
+(BACKEND REST API PROJECT)
 
-## Description
-The Contact Manager project is a simple application that allows users to **store, view, update, and delete contact information** such as name, phone number, email, and address. This project helps manage personal or professional contacts efficiently.
+Project Documentation
 
-## Features
-- Add new contacts  
-- View all contacts  
-- Update existing contact information  
-- Delete contacts  
-- Search contacts by name or phone number  
+Submitted by:
+                      RAJA RAJESHWARI A
+                      AARUDHRA V
+                     NETHRA B
+                     PUNITHAVALLI  R
+ FROM 
+            II BSC COMPUTER SCIENCE
+           DEPARTMENT OF COMPUTER SCIENCE 
+QUAID-E-MILLATH GOVERNMENT COLLEGE FOR WOMEN
 
-## Technologies Used
-- Node.js  
-- Express.js  
-- MongoDB (for storing contact data)  
-- HTML/CSS/JS (for front-end interface)  
+Abstract
 
-## Installation
-1. Clone the repository:  
-```bash
-git clone https://github.com/Raji2302/contact_management_api.git
+The Contact Management System is a  API application developed using Node.js, Express.js, and MongoDB.
+ The purpose of this system is to allow users to manage their personal and professional contacts efficiently
+ Users can register, log in securely, and perform CRUD operations such as creating, reading, updating, and deleting contacts.
+ The system stores all data in a MongoDB database and uses Express.js for server-side routing and request handling.
+This project demonstrates the use of backend technologies to build scalable APIs. 
+Thunder Client is used to test and validate API endpoints during development.
+ The project follows modular architecture with routes, controllers, models, and middleware to ensure maintainability and scalability.
+Introduction
+
+Managing contacts is an essential requirement in both personal and professional environments. 
+Traditionally, contacts were stored in notebooks or spreadsheets. However, these methods are inefficient when managing large amounts of information. A digital contact management system provides better accessibility, security, and organization.
+This project aims to create a backend system that allows users to store and manage contacts using a REST API. 
+
+The system supports authentication features such as user registration and login, ensuring that each user's data is securely managed.
+ By implementing modern backend technologies, this project demonstrates the principles of API design, database integration, and server-side programming.
+Problem Statement
+
+Many individuals and organizations struggle with organizing and managing large sets of contact information.
+Manual systems lack search capabilities, data security, and efficient management features.
+ There is a need for a simple yet powerful system that enables users to store, retrieve, and manage contacts digitally.
+The Contact Management System addresses this problem by providing a centralized database and API-based access for managing contacts. 
+Users can easily perform operations such as adding new contacts, viewing existing contacts, updating information, and deleting outdated records.
+Objectives
+
+1.To design a REST API for managing contacts.
+2.To implement user authentication using Node.js.
+3. To store and retrieve data using MongoDB.
+4. To test API endpoints using Thunder Client.
+5. To demonstrate CRUD operations in a backend application.
+Technologies Used
+Node.js
+
+Node.js is a JavaScript runtime used for building scalable backend applications.
+Express.js
+
+Express.js is a lightweight framework used for building APIs and handling HTTP requests.
+MongoDB
+
+MongoDB is a NoSQL database used to store contact information.
+Mongoose
+
+Mongoose provides a schema-based solution for modeling application data.
+Thunder Client
+
+Thunder Client is a VS Code extension used to test API endpoints.
+
+Database Design
+The system uses two main collections: 
+Users and Contacts.
+
+Users collection stores authentication information such as name, email, and password.
+Contacts collection stores contact details including name, email, phone number, and the associated user ID.
+
+API Endpoints
+
+ Register new user
+POST /api/auth/register
+ User login
+POST /api/auth/login
+ Get all contacts
+GET /api/contacts 
+Create new contact
+POST /api/contacts 
+Update Contact
+PUT /api/contacts/:id 
+Delete Contact
+DELETE /api/contacts/:id – Delete contact
+Implementation Details
+
+1.Overview of Implementation
+  The Contact Management System is implemented using a API architecture.
+ The backend server is developed using Node.js and Express.js, and the data is stored in MongoDB using Mongoose as the Object Data Modeling (ODM) library.
+The application allows users to:
+Register a new account
+Login and receive authentication token
+Create a contact
+View all contacts
+Update contact information
+Delete a contact
+Search contacts by name
+
+The APIs are tested using Thunder Client.
+The Contact Management System was implemented as a backend RESTful API application. 
+The system was developed to allow users to manage their personal contacts efficiently.
+ The implementation focuses on providing secure user authentication and complete contact management functionality such as adding, viewing, updating, deleting, and searching contacts.
+The application follows a modular architecture where different components of the system are separated into individual modules such as models, routes, controllers, and middleware
+ This approach improves maintainability, scalability, and readability of the application.
+The system communicates with a database to store and retrieve contact information
+. Each operation performed by the user is handled through API requests and responses.
+
+2. Development Environment
+The project was developed using the following tools and technologies:
+The development of the Contact Management System was carried out using modern web development tools and technologies.
+The backend of the system was developed using Node.js, which provides a fast and scalable environment for building server-side applications.
+The application framework used for handling HTTP requests and responses is Express.js. Express simplifies the process of creating APIs and managing routes.
+The database used for storing application data is MongoDB. MongoDB stores data in the form of collections and documents, which makes it flexible and efficient for managing contact data.
+To interact with MongoDB from the Node.js application, Mongoose was used. Mongoose provides schema-based data modeling which helps maintain structure and validation of stored data.
+The development and coding of the project were done using Visual Studio Code.
+API testing was performed using Thunder Client, which allowed sending and receiving HTTP requests directly from the editor.
+Backend Framework
+ Node.js
+Web Framework: 
+Express.js
+Database:
+ MongoDB
+ODM Library:
+ Mongoose
+Code Editor
+ Visual Studio Code
+API Testing Tool: 
+Thunder Client
+3. Project Structure
+The project was organized using a structured folder hierarchy to maintain clean and manageable code. Each folder in the project serves a specific purpose.
+The configuration folder is responsible for managing the database connection. It contains the setup required for connecting the application to the MongoDB database.
+The models folder contains the data models used in the system. These models define the structure of data stored in the database, such as user information and contact details.
+The routes folder manages the API endpoints of the application. Each route corresponds to a specific function such as registering a user, logging in, or managing contacts.
+The middleware folder handles additional processing required for certain requests. This includes authentication checks and validation before accessing protected routes.
+The main server file initializes the application, connects the database, and starts the server.
+The project follows a modular folder structure to maintain clean and scalable code.
+contact-management-api
+│
+├── config
+│   └── db.js
+│
+├── models
+│   ├── userModel.js
+│   └── contactModel.js
+│
+├── routes
+│   ├── userRoutes.js
+│   └── contactRoutes.js
+│
+├── middleware
+│   └── authMiddleware.js
+│
+├── server.js
+└── package.json
+contact-management-api
+│
+├── config
+│   └── db.js
+│
+├── models
+│   ├── userModel.js
+│   └── contactModel.js
+│
+├── routes
+│   ├── userRoutes.js
+│   └── contactRoutes.js
+│
+├── middleware
+│   └── authMiddleware.js
+│
+├── server.js
+└── package.json
+Each folder performs a specific role in the application.
+5. Contact Management Implementation
+The core functionality of the system is the management of contacts. The system provides several operations that allow users to manage their contact information effectively.
+Adding Contacts
+Users can add new contacts by providing details such as name, email address, and phone number. Once the contact information is submitted, the system stores the data in the MongoDB database.
+Viewing Contacts
+Users can view all the contacts stored in their account. The system retrieves the contact data from the database and sends it back as a response to the user.
+Updating Contacts
+The system allows users to update the details of an existing contact. Users can modify information such as the name, email address, or phone number of a contact.
+Deleting Contacts
+Users can remove contacts from the system. Once a contact is deleted, the information is permanently removed from the database.
+Searching Contacts
+A search functionality is implemented to help users quickly find contacts based on their names. The system performs a search operation in the database and returns matching results.
+
+6. Database Implementation
+The database plays a crucial role in storing and managing the data used in the application. MongoDB was chosen because it provides a flexible document-based structure that is suitable for storing contact information.
+Two main collections are used in the database:
+Users Collection 
+ Stores information about registered users such as name, email, and password.
+Contacts Collection 
+Stores contact details such as name, email, and phone number associated with users.
+Each contact record is linked to a specific user to ensure data isolation and security.
+The use of Mongoose schemas ensures that the data stored in the database follows a consistent structure and validation rules.
+
+7. API Communication
+The application follows a RESTful API design where clients communicate with the server using HTTP requests.
+Different HTTP methods are used to perform various operations:
+POST – Used to create new records such as registering users or adding contacts.
+GET – Used to retrieve information from the database.
+PUT – Used to update existing records.
+DELETE – Used to remove records from the database.
+The server processes these requests and returns responses in JSON format, which allows easy communication between the backend and potential frontend applications.
+
+8. Testing and Validation
+The system was tested extensively to ensure that all functionalities work correctly. API endpoints were tested using Thunder Client within Visual Studio Code.
+Various test cases were performed including:
+Registering a new user
+Logging into the system
+Adding contacts
+Retrieving contacts
+Updating contact information
+Deleting contacts
+Searching contacts
+Different HTTP methods are used to perform various operations:
+
+POST – 
+Used to create new records such as registering users or adding contacts.
+GET 
+Used to retrieve information from the database.
+PUT – 
+Used to update existing records.
+DELETE – 
+Used to remove records from the database.
+
+The server processes these requests and returns responses in JSON format, which allows easy communication between the backend and potential frontend applications.
+
+All responses were verified to ensure that the system performs operations accurately and returns the correct results.
+
+9. Error Handling
+Error handling was implemented to ensure the system responds appropriately when unexpected situations occur.
+The application checks for common issues such as invalid input data, authentication failures, and database errors. When an error occurs, the system returns meaningful error messages to help users understand the issue.
+Proper error handling improves the reliability and usability of the application.
+All responses were verified to ensure that the system performs operations accurately and returns the correct results.
+
+10. Summary of Implementation
+The implementation of the Contact Management System successfully integrates backend technologies to provide a complete contact management solution.
+The use of Node.js and Express provides a scalable server environment, while MongoDB ensures efficient data storage and retrieval. Authentication mechanisms protect user data and ensure secure access to the system.
+The modular structure of the project allows future enhancements such as adding a frontend interface, deploying the application to cloud platforms, or integrating additional features.
+ System Architecture
+The Contact Management System follows a client–server architecture. In this architecture, the client sends requests to the server and the server processes those requests and returns the appropriate responses.
+The client interacts with the backend through API requests. The server processes the request using different modules such as routes, controllers, and middleware. The server then communicates with the database to retrieve or store the necessary data.
+The system architecture mainly consists of three layers:
+1. Presentation Layer
+The presentation layer is responsible for user interaction with the system. In this project, the API testing tool was used as the client to send requests and receive responses from the server.
+The client sends HTTP requests such as GET, POST, PUT, and DELETE to perform different operations.
+2. Application Layer
+The application layer contains the main logic of the system. This layer processes incoming requests and performs the required operations.
+It includes:
+Controllers
+Routes
+Middleware
+Authentication mechanisms
+The application layer handles user authentication and contact management functionalities.
+3. Data Layer
+The data layer manages the storage and retrieval of data. The system uses MongoDB as the database.
+The database stores:
+User information
+Contact details
+Data is stored in the form of documents within collections.
+
+ Database Design
+The database is designed to store information about users and their contacts. The structure of the database ensures that each user can manage their own contacts securely.
+Two main collections are used in the database.
+Users Collection
+This collection stores the details of registered users in the system.
+Information stored includes:
+User name
+Email address
+Password
+Each user is uniquely identified using a system-generated identifier.
+Contacts Collection
+This collection stores the details of contacts created by users.
+The stored information includes:
+Contact name
+Email address
+Phone number
+User reference ID
+The user reference ID links each contact to a specific user. 
+This ensures that contacts created by one user cannot be accessed by another user.
+
+API Endpoints Description
+The application provides multiple API endpoints that allow users to interact with the system.
+These endpoints allow users to perform various operations such as authentication and contact management.
+User Registration Endpoint
+This endpoint allows new users to create an account in the system.
+The user provides their name, email, and password. The system validates the information and stores the user details in the database.
+User Login Endpoint
+This endpoint allows registered users to log into the system.
+The system verifies the email and password provided by the user. If the credentials are correct, an authentication token is generated.
+Add Contact Endpoint
+This endpoint allows authenticated users to add new contacts to their account.
+The user provides contact information such as name, email, and phone number.
+Get Contacts Endpoint
+This endpoint retrieves all contacts associated with the authenticated user.
+The system queries the database and returns the list of contacts.
+Update Contact Endpoint
+This endpoint allows users to update the details of an existing contact.
+The system identifies the contact using its unique identifier and updates the specified fields.
+Delete Contact Endpoint
+This endpoint allows users to remove a contact from their account.
+The selected contact is permanently removed from the database.
+Search Contact Endpoint
+This endpoint allows users to search for contacts by name. The system performs a search operation and returns matching results.
+
+Testing and Validation
+Testing plays a vital role in ensuring that the system works correctly and meets the project requirements.
+The APIs were tested using Thunder Client, which allowed the developer to send HTTP requests and verify responses directly within the development environment.
+Different test cases were performed to verify the functionality of the system.
+User Authentication Testing
+The following operations were tested:
+Registering a new user
+Logging in with valid credentials
+Logging in with invalid credentials
+Verifying authentication tokens
+Contact Management Testing
+Several test cases were performed to validate contact operations:
+
+Adding new contacts
+Retrieving contacts
+Updating contact details
+Deleting contacts
+Searching contacts
+Each operation was tested with valid and invalid inputs to ensure the system behaves correctly in all situations.
+
+Results and Discussion
+The Contact Management System was successfully implemented and tested. All core functionalities worked as expected.
+The system allows users to register and securely log into the application. After authentication, users can manage their contacts efficiently.
+The contact management features allow users to add, view, update, delete, and search contacts without any issues.
+The database stores and retrieves data efficiently, and the authentication mechanism ensures secure access to the system.
+The results of testing confirm that the system meets the project objectives and performs all required operations correctly.
+
+Advantages of the System
+The Contact Management System offers several advantages that improve the efficiency of managing contact information.
+The system allows users to store and manage contacts in an organized manner.
+It provides secure authentication to protect user data.
+Users can quickly search and retrieve contact information.
+The system uses a scalable backend architecture.
+The use of modern technologies ensures better performance and maintainability.
+
+Limitations of the System
+Although the system performs its intended functions successfully, some limitations exist.
+The system currently provides only backend functionality without a graphical user interface.
+It requires technical tools to interact with the API.
+The system is designed for small-scale usage and may require additional optimization for large-scale deployment.
+These limitations can be addressed in future improvements.
+
+ Future Enhancements
+Several enhancements can be implemented to improve the functionality and usability of the system.
+Future improvements may include:
+
+Developing a frontend user interface for easier interaction.
+Implementing advanced search filters for contacts.
+Adding profile management features for users.
+Deploying the application to cloud platforms.
+Integrating mobile application support.
+These enhancements will make the system more powerful and user-friendly.
+
+Conclusion
+The Contact Management System was successfully developed using modern web technologies. The system provides a reliable and secure platform for managing contact information.
+The project demonstrates the effective use of backend technologies such as Node.js and Express.js for building RESTful APIs.
+The use of MongoDB enables efficient storage and retrieval of data, while authentication mechanisms ensure secure access to the system.
+Overall, the project successfully meets its objectives and provides a solid foundation for further development and enhancements.
+
+
+窗体顶端
+
+
+窗体底端
