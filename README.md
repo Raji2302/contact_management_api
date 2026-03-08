@@ -19,4 +19,4 @@ The Contact Manager project is a simple application that allows users to **store
 ## Installation
 1. Clone the repository:  
 ```bash
-git clone https://github.com/username/contact-manager.git
+git clone https://github.com/Raji2302/contact_management_api.git
