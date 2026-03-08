@@ -105,8 +105,28 @@ The system uses two main collections: **Users** and **Contacts**.
 - **Code Editor:** Visual Studio Code  
 - **API Testing Tool:** Thunder Client  
 
-### Project Structure---
-
+### Project Structure---project 
+                      --server.js
+                      --db.js
+                      --package.json
+                      --package-lock.json
+                      --models
+                             ---usermadels.js
+                             --contactmodel.js
+                      --routes
+                             --authroutes.js
+                             --contactroutes.js
+                      --middleware
+                              --authmiddleware.js
+                              --errorhandle.js
+                      --.env
+                      --node-modules
+                      --.gitignore
+                      --README.md
+                      --gitattirbutes
+                      --uploads
+                              --My_Video_Final.mp4
+                              
 ## Contact Management Implementation
 
 - **Adding Contacts:** Users provide name, email, phone number → stored in MongoDB.  
